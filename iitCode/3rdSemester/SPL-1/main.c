@@ -6,10 +6,6 @@
 #include<sys/types.h>
 #include<sys/wait.h>
 
-
-
-
-
 void list_open_files()
 {
     int pid;
