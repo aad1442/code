@@ -6,6 +6,13 @@
 #include<sys/types.h>
 #include<sys/wait.h>
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> 0af7d9d (first commit)
 void list_open_files()
 {
     int pid;
