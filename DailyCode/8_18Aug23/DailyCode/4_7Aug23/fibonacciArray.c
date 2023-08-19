@@ -1,8 +1,8 @@
 #include<stdio.h>
 #define max 100
-long int mat[max];
+int mat[max];
 
-long int fibonacci(int n, int *steps) {
+int fibonacci(int n, int *steps) {
     (*steps)++;
     if(mat[n] != -1){
         return mat[n];
@@ -25,8 +25,8 @@ int main() {
     }
 
     int steps = 0;
-    long int fib = fibonacci(n, &steps);
-    printf("Fibonacci of %d is %ld\n", n, fib);
+    int fib = fibonacci(n, &steps);
+    printf("Fibonacci of %d is %d\n", n, fib);
     printf("Steps taken: %d\n", steps);
 
     return 0;
