@@ -110,29 +110,29 @@ for (i = 0; i < MAX_STATES; i++) {
     }
     int *next_states_queue = malloc(MAX_STATES * MAX_STATES * sizeof(int));
 int array[MAX_STATES*MAX_STATES];
-int kk=0,previousStart=0,previousEnd=0,presentStart=0,presentEnd=0;
-array[kk]=ps;
+int present=0, previousStarting ,previousEnding;
 for (int i = 0; i < strlength; i++) {
-
-    while (previousStart<=previousEnd) {
-        int current_state = array[previousStart];
-        previousStart++;
+    previousStarting= previousEnding+1;
+    previousEnding = present;
+    while (previous<=present) {
+        int current_state = array[previous];
+        jj++;
         printf("Current state is: %d", current_state);
         for (k = 0; k < MAX_STATES; k++) {
             if (mat[current_state][str[i]][k] != -1) {
-                kk++;
-                array[kk]=mat[current_state][str[i]][k];
+                printf("KK1 - %d, KK2- %d",kk,kk2);
+                array[kk2]=mat[current_state][str[i]][k];
+                kk2++;
             } else {
                 break;
             }
         }
     }
-    previousStart=previousEnd+1;
-    previousEnd=kk ;
+    kk=kk2+1;
 }
 
 bool isAccepted = false;
-for(int i=previousStart;i<=previousEnd;i++){
+for(int i=kk;i<kk2;i++){
     if(array[i]==fs){
         isAccepted = true;
     }
@@ -143,13 +143,6 @@ if (isAccepted) {
 } else {
     printf("Rejected\n");
 }
-
-// printf("Start: %d, End: %d ",previousStart,previousEnd);
-// for(int i=0;i<=kk;i++){
-//     printf("%d\n",array[i]);
-// }
-
-
 
 
 }

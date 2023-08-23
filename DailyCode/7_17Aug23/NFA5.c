@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <stdlib.h>
+#include<string.h>
 
 #define MAX_STATES 10
 #define MAX_ALPHABET 10
@@ -97,16 +98,13 @@ for (i = 0; i < MAX_STATES; i++) {
         }
     }
 
-    int strlength;
-    printf("Enter the string length: ");
-    scanf("%d", &strlength);
-    int str[strlength];
-    for (i = 0; i < strlength; i++) {
-        scanf("%d", &str[i]);
-    }
+    char str[100];
+    printf("Enter the input string: ");
+    scanf("%s", str);
+    int strlength = strlen(str);
 
     for (i = 0; i < strlength; i++) {
-        printf("\n%d\n", str[i]);
+        printf("\n%c\n", str[i]);
     }
     int *next_states_queue = malloc(MAX_STATES * MAX_STATES * sizeof(int));
 int array[MAX_STATES*MAX_STATES];
