@@ -1,3 +1,5 @@
+//
 #include<iostream>
 
-void printingFunction();
+
+void printingFunction();hgvghfhfhhg

@@ -1,4 +1,5 @@
-#include "system_functions.h"
+//system_function.cpp
+//#include "system_functions.h"
 #include <iostream>
 #include <cstdio>
 #include <cstdlib>

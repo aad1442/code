@@ -1,15 +1,8 @@
 #include <iostream>
-// #include "../project_folder/menu_functions.h"
-// #include "../project_folder/network_functions.h"
-// #include "../project_folder/process_fuctions.h"
-// #include "../project_folder/system_functions.h"
-
-#include "menu_functions.cpp"
-#include "network_fuctions.cpp"
-#include "process_fuctions.cpp"
-#include "system_functions.cpp"
-
-
+#include "../project_folder/menu_functions.h"
+#include "../project_folder/network_functions.h"
+#include "../project_folder/process_functions.h"
+#include "../project_folder/system_functions.h"
 
 int main() {
     int choice;

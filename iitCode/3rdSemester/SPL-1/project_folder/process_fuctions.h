@@ -1,3 +1,4 @@
+//process_functions.h
 void list_processes();
 void show_process_details();
 void kill_process();
