@@ -5,6 +5,7 @@
 #include <csignal>
 #include <sys/types.h>
 #include <sys/wait.h>
+#include <limits>
 
 void list_open_files()
 {
@@ -140,8 +141,6 @@ void print_menu()
 
 
 
-
-
 int main()
 {
     int choice;
@@ -150,7 +149,8 @@ int main()
         print_menu();
         std::cout << "Enter your choice: ";
         std::cin >> choice;
-        //std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Add this line
+        //To clear the input buffer
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
         switch (choice)
         {
@@ -172,7 +172,24 @@ int main()
         case 6:
             monitor_cpu_usage();
             break;
-        // ... handle other cases ...
+        case 7:
+            show_memory_usage();
+            break;
+        case 8:
+            show_disk_usage();
+            break;
+        case 9:
+            show_running_processes_per_user();
+            break;
+        case 10:
+            kill_processes_by_time();
+            break;
+        case 11:
+            show_process_hierarchy();
+            break;
+        case 12:
+            list_processes_by_string();
+            break;
         case 13:
             exit(EXIT_SUCCESS);
         default:
@@ -182,3 +199,4 @@ int main()
     }
     return 0;
 }
+
